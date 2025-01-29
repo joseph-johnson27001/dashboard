@@ -3,18 +3,18 @@
     <!-- Left: Search Bar -->
     <div class="search-bar">
       <i class="fas fa-search"></i>
-      <span>Search</span>
+      <input type="text" placeholder="Search" />
     </div>
 
     <!-- Right: Profile and Icons -->
     <div class="user-icons">
       <div class="icon-circle"><span>文</span></div>
       <!-- Language icon -->
-      <div class="icon-circle"><i class="fas fa-qrcode"></i></div>
+      <div class="icon-circle"><i class="fa fa-check"></i></div>
       <!-- Scan icon -->
-      <div class="icon-circle"><i class="fas fa-moon"></i></div>
+      <div class="icon-circle"><i class="far fa-star"></i></div>
       <!-- Moon icon -->
-      <div class="icon-circle"><i class="fas fa-map-pin"></i></div>
+      <div class="icon-circle"><i class="fa fa-alt fa-map-pin"></i></div>
       <!-- Pin icon -->
       <div class="profile-circle">
         <img src="profile.jpg" alt="Profile" />
@@ -59,9 +59,17 @@ export default {
   font-size: 12px;
 }
 
-.search-bar span {
-  font-size: 12px;
-  font-weight: 100;
+.search-bar input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-bar input::placeholder {
+  color: #555;
 }
 
 .user-icons {
@@ -72,16 +80,17 @@ export default {
 }
 
 .icon-circle {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   border-radius: 50%;
-  margin-left: 15px;
+  margin-left: 10px;
   font-size: 12px;
   border: 1px solid #ccc;
+  color: #555;
 }
 
 .profile-circle {
