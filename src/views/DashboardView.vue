@@ -5,6 +5,7 @@
     <!-- Main Content -->
     <div class="content-area">
       <HeadingArea />
+      <StatisticsArea />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 <script>
 import NavBar from "@/components/layout/NavBar.vue";
 import HeadingArea from "@/components/layout/HeadingArea.vue";
+import StatisticsArea from "@/components/layout/StatisticsArea.vue";
 
 export default {
   name: "DashboardView",
   components: {
     NavBar,
     HeadingArea,
+    StatisticsArea,
   },
 };
 </script>
@@ -29,6 +32,6 @@ export default {
 }
 
 .content-area {
-  padding: 20px;
+  padding: 15px 20px;
 }
 </style>

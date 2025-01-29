@@ -27,7 +27,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px;
 }
 
 .welcome-text {
@@ -44,7 +43,7 @@ export default {
 .welcome-text p {
   font-size: 14px;
   color: #555;
-  margin-top: 5px;
+  margin: 5px 0px 5px 0px;
 }
 
 .buttons {
@@ -53,7 +52,7 @@ export default {
 }
 
 button {
-  padding: 15px 20px;
+  padding: 10px 20px;
   margin-left: 10px;
   font-size: 14px;
   font-weight: 400;
