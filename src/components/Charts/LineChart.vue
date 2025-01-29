@@ -54,7 +54,12 @@ export default defineComponent({
           max: 10000,
           ticks: {
             stepSize: 2000,
-            callback: (value) => `${value / 1000}K`,
+            callback: (value) => {
+              if (value === 0) {
+                return "";
+              }
+              return `${value / 1000}K`;
+            },
           },
           grid: {
             display: false,
