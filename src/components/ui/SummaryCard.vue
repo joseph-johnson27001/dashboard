@@ -11,6 +11,9 @@
       </div>
     </div>
 
+    <!-- Divider -->
+    <div class="divider"></div>
+
     <!-- Chart Component -->
     <LineChart :selected-range="selectedRange" />
   </div>
@@ -62,6 +65,12 @@ export default {
   border-radius: 8px;
   padding: 5px 10px;
   position: relative;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
 }
 
 select {

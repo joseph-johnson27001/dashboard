@@ -1,11 +1,15 @@
 <template>
   <div class="chart-container">
-    <LineChart :chart-data="chartData" :chart-options="chartOptions" />
+    <LineChart
+      ref="lineChart"
+      :chart-data="chartData"
+      :chart-options="chartOptions"
+    />
   </div>
 </template>
 
 <script>
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, onMounted } from "vue";
 import { Chart, registerables } from "chart.js";
 import { LineChart } from "vue-chart-3";
 
@@ -13,9 +17,6 @@ Chart.register(...registerables);
 
 export default defineComponent({
   components: { LineChart },
-  props: {
-    selectedRange: String, // Receives the selected range
-  },
   setup() {
     const chartData = reactive({
       labels: [
@@ -49,7 +50,7 @@ export default defineComponent({
 
     const chartOptions = {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: false, // Allow manual height control
       scales: {
         y: {
           beginAtZero: true,
@@ -64,8 +65,7 @@ export default defineComponent({
         },
         x: {
           grid: {
-            color: "#ddd", // Light vertical grid lines
-            drawBorder: false,
+            display: false,
           },
         },
       },
@@ -76,6 +76,16 @@ export default defineComponent({
         },
       },
     };
+
+    // On mounted, target the canvas to apply custom styles
+    onMounted(() => {
+      const canvas = document.querySelector("canvas");
+      if (canvas) {
+        canvas.style.maxHeight = "250px";
+        canvas.style.width = "100%"; // Optionally set width as well if you need
+        canvas.style.objectFit = "cover"; // Ensures proper scaling within the max-height
+      }
+    });
 
     return { chartData, chartOptions };
   },

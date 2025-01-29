@@ -51,6 +51,12 @@ export default {
           sales: 150,
           // image: "item3.jpg"
         },
+        {
+          name: "Item 4",
+          id: 12347,
+          sales: 150,
+          // image: "item3.jpg"
+        },
       ],
     };
   },
