@@ -27,8 +27,8 @@ export default defineComponent({
           label: "Orders",
           data: [2000, 4000, 3000, 6000, 5000, 8000, 7000],
           borderColor: "#2E7D32",
-          backgroundColor: "rgba(46, 125, 50, 0.2)",
-          borderWidth: 2,
+          backgroundColor: "#30a378",
+          borderWidth: 3,
           tension: 0.4,
           pointRadius: 0,
         },
@@ -36,8 +36,8 @@ export default defineComponent({
           label: "Income Growth",
           data: [1000, 2000, 1500, 3500, 2500, 4500, 4000],
           borderColor: "#81C784",
-          backgroundColor: "rgba(129, 199, 132, 0.2)",
-          borderWidth: 2,
+          backgroundColor: "#4adf21",
+          borderWidth: 3,
           tension: 0.4,
           pointRadius: 0,
         },
@@ -68,7 +68,6 @@ export default defineComponent({
             drawBorder: false,
             drawTicks: false,
           },
-          offset: true,
         },
       },
       plugins: {
@@ -136,6 +135,5 @@ export default defineComponent({
 canvas {
   max-height: 250px;
   width: 100%;
-  object-fit: cover;
 }
 </style>
