@@ -80,8 +80,8 @@ export default {
 }
 
 .icon-circle {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;

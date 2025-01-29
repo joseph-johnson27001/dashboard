@@ -29,7 +29,7 @@ body {
 #app {
   display: flex;
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

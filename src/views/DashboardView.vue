@@ -3,17 +3,21 @@
     <NavBar />
 
     <!-- Main Content -->
-    <div class="main-content"></div>
+    <div class="content-area">
+      <HeadingArea />
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/layout/NavBar.vue";
+import HeadingArea from "@/components/layout/HeadingArea.vue";
 
 export default {
   name: "DashboardView",
   components: {
     NavBar,
+    HeadingArea,
   },
 };
 </script>
@@ -22,11 +26,9 @@ export default {
 .dashboard-view {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
-.main-content {
-  flex-grow: 1;
+.content-area {
   padding: 20px;
 }
 </style>
