@@ -38,6 +38,7 @@ export default {
   color: #555;
   width: 100%;
   border-bottom: 1px solid #eee;
+  padding: 5px 0px;
 }
 
 .search-bar {
@@ -45,8 +46,8 @@ export default {
   align-items: center;
   background-color: #f4f7fe;
   padding: 10px 15px;
-  margin: 10px;
-  width: 40%;
+  margin: 10px 20px;
+  width: 30%;
   border-radius: 10px;
   font-size: 16px;
   border: 1px solid #eee;
@@ -66,13 +67,13 @@ export default {
 .user-icons {
   display: flex;
   align-items: center;
-  margin: 10px 20px;
+  margin: 10px 40px;
   cursor: pointer;
 }
 
 .icon-circle {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +85,8 @@ export default {
 }
 
 .profile-circle {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
