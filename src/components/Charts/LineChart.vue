@@ -25,8 +25,8 @@ export default defineComponent({
       datasets: [
         {
           label: "Orders",
-          data: [2000, 4000, 3000, 6000, 5000, 8000, 7000],
-          borderColor: "#2E7D32",
+          data: [7000, 6000, 6500, 6000, 5000, 8000, 7000],
+          borderColor: "#30a378",
           backgroundColor: "#30a378",
           borderWidth: 3,
           tension: 0.4,
@@ -34,8 +34,8 @@ export default defineComponent({
         },
         {
           label: "Income Growth",
-          data: [1000, 2000, 1500, 3500, 2500, 4500, 4000],
-          borderColor: "#81C784",
+          data: [4000, 4000, 1500, 3500, 2500, 4500, 4000],
+          borderColor: "#4adf21",
           backgroundColor: "#4adf21",
           borderWidth: 3,
           tension: 0.4,
