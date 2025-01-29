@@ -105,7 +105,7 @@ export default {
 
 .card-row {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 2fr;
   margin: 20px 0px;
   gap: 20px;
 }

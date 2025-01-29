@@ -1,28 +1,217 @@
 <template>
-  <div class="card">RECENT ORDERS</div>
+  <div class="recent-orders-card">
+    <!-- Header Section -->
+    <div class="header">
+      <h3 class="title">Recent Orders</h3>
+      <button class="view-all-button">View All</button>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Table Section -->
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Customer</th>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(order, index) in orders" :key="index">
+          <!-- Product with image -->
+          <td class="product">
+            <div class="product-info">
+              <img :src="order.image" alt="Product" class="product-image" />
+              <span class="product-name">{{ order.product }}</span>
+            </div>
+          </td>
+
+          <!-- Customer Name -->
+          <td>
+            <span class="customer-name">{{ order.customer }}</span>
+          </td>
+
+          <!-- Order ID -->
+          <td class="order-id">#{{ order.orderId }}</td>
+
+          <!-- Date -->
+          <td class="order-date">{{ order.date }}</td>
+
+          <!-- Status -->
+          <td>
+            <span class="status-tag" :class="statusClass(order.status)">
+              {{ order.status }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "RecentOrdersCard",
+  name: "RecentOrderCard",
+  data() {
+    return {
+      orders: [
+        {
+          product: "Smartphone X",
+          image: "https://via.placeholder.com/60",
+          customer: "Alice Johnson",
+          orderId: "2345",
+          date: "27 Jun 2025",
+          status: "Pending",
+        },
+        {
+          product: "Wireless Headphones",
+          image: "https://via.placeholder.com/60",
+          customer: "Michael Smith",
+          orderId: "6789",
+          date: "25 Jun 2025",
+          status: "Cancelled",
+        },
+        {
+          product: "Gaming Mouse",
+          image: "https://via.placeholder.com/60",
+          customer: "Samantha Lee",
+          orderId: "3456",
+          date: "22 Jun 2025",
+          status: "Shipped",
+        },
+      ],
+    };
+  },
+  methods: {
+    statusClass(status) {
+      return {
+        pending: status === "Pending",
+        cancelled: status === "Cancelled",
+        shipped: status === "Shipped",
+      };
+    },
+  },
 };
 </script>
 
 <style scoped>
-.card {
-  padding: 20px;
+/* Card Styling */
+.recent-orders-card {
+  padding: 20px 20px 0px 20px;
   border: 1px solid #eee;
   border-radius: 12px;
   background-color: white;
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-description {
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.view-all-button {
+  background: none;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  color: #007bff;
   font-size: 14px;
-  color: #666;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
+}
+
+/* Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.orders-table td {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Product Image & Name */
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 60px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.product-name {
+  font-weight: 500;
+}
+
+/* Customer Name */
+.customer-name {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Order ID */
+.order-id {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Order Date */
+.order-date {
+  color: #777;
+}
+
+/* Status Tags */
+.status-tag {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Status Colors */
+.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.shipped {
+  background-color: #d4edda;
+  color: #155724;
 }
 </style>

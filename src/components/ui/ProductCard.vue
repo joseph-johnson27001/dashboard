@@ -6,6 +6,9 @@
       <span class="three-dots">...</span>
     </div>
 
+    <!-- Divider -->
+    <div class="divider"></div>
+
     <!-- Rows of Items -->
     <div class="items">
       <!-- Loop through products using v-for -->
@@ -56,7 +59,7 @@ export default {
 
 <style scoped>
 .product-card {
-  padding: 0px 20px;
+  padding: 20px 20px 0px 20px;
   border: 1px solid #eee;
   border-radius: 12px;
   background-color: white;
@@ -79,6 +82,12 @@ export default {
   font-size: 30px;
   color: grey;
   cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
 }
 
 .items {

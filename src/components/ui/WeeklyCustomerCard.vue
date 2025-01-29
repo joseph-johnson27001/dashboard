@@ -1,10 +1,13 @@
 <template>
-  <div class="recent-orders-card">
+  <div class="weekly-orders-card">
     <!-- Top Heading Section -->
     <div class="header">
       <h3 class="title">Weekly Top Customers</h3>
       <span class="three-dots">...</span>
     </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
 
     <!-- Rows of Customers -->
     <div class="customers">
@@ -36,7 +39,7 @@ export default {
         {
           name: "Alice Johnson",
           orders: 25,
-          image: "https://via.placeholder.com/50", // Placeholder image
+          image: "https://via.placeholder.com/50",
         },
         {
           name: "Michael Smith",
@@ -48,6 +51,11 @@ export default {
           orders: 30,
           image: "https://via.placeholder.com/50",
         },
+        // {
+        //   name: "Lewis Colton",
+        //   orders: 32,
+        //   image: "https://via.placeholder.com/50",
+        // },
       ],
     };
   },
@@ -55,8 +63,8 @@ export default {
 </script>
 
 <style scoped>
-.recent-orders-card {
-  padding: 0px 20px;
+.weekly-orders-card {
+  padding: 20px 20px 0px 20px;
   border: 1px solid #eee;
   border-radius: 12px;
   background-color: white;
@@ -66,7 +74,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
 }
 
 .title {
@@ -79,6 +86,12 @@ export default {
   font-size: 30px;
   color: grey;
   cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
 }
 
 .customers {
