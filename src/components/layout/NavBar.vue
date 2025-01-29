@@ -44,7 +44,7 @@ export default {
   display: flex;
   align-items: center;
   background-color: #f4f7fe;
-  padding: 5px 15px;
+  padding: 5px 10px;
   margin: 10px 20px;
   width: 30%;
   border-radius: 10px;
@@ -54,7 +54,7 @@ export default {
 }
 
 .search-bar i {
-  margin-right: 10px;
+  margin-right: 2px;
   font-size: 12px;
 }
 
@@ -74,7 +74,7 @@ export default {
 .user-icons {
   display: flex;
   align-items: center;
-  margin: 10px 40px;
+  margin: 10px 20px;
   cursor: pointer;
 }
 

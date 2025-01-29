@@ -5,8 +5,22 @@
       <p class="card-value">{{ value }}</p>
     </div>
     <div class="card-footer">
-      <div class="percentage-change" :style="{ color: changeColor }">
-        {{ percentage }}
+      <!-- Bottom Left Percentage Change -->
+      <div class="percentage-container">
+        <div
+          class="percentage-change"
+          :style="{
+            color: changeColorText,
+          }"
+        >
+          <i :class="chevronIconClass" :style="{ color: changeColorText }"></i>
+          {{ percentage }}
+        </div>
+      </div>
+
+      <!-- Bottom Right Additional Value -->
+      <div class="additional-value-container" v-if="additionalValue">
+        <p class="additional-value">{{ additionalValue }}</p>
       </div>
     </div>
   </div>
@@ -20,10 +34,16 @@ export default {
     value: String,
     percentage: String,
     backgroundColor: String,
+    additionalValue: String,
   },
   computed: {
-    changeColor() {
-      return this.percentage.startsWith("-") ? "red" : "green";
+    changeColorText() {
+      return this.percentage.startsWith("-") ? "#f3635d" : "#5cc49f";
+    },
+    chevronIconClass() {
+      return this.percentage.startsWith("-")
+        ? "fas fa-chevron-down"
+        : "fas fa-chevron-up";
     },
   },
 };
@@ -34,8 +54,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 20px 20px;
+  border-radius: 10px;
 }
 
 .card-header {
@@ -50,15 +70,45 @@ export default {
 }
 
 .card-value {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  margin-top: 5px;
+  margin: 5px 0px 15px 0px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.percentage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .percentage-change {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 12px;
   font-size: 12px;
   font-weight: 600;
-  text-align: left;
-  margin-top: 10px;
+  background-color: white;
+}
+
+.percentage-change i {
+  margin-right: 8px;
+  font-size: 10px;
+}
+
+.additional-value-container {
+  padding: 5px 10px;
+}
+
+.additional-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
 }
 </style>

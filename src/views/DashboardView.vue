@@ -32,6 +32,6 @@ export default {
 }
 
 .content-area {
-  padding: 15px 20px;
+  padding: 20px 30px;
 }
 </style>
