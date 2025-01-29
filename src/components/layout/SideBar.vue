@@ -15,23 +15,78 @@
     <!-- Navigation Menu -->
     <nav class="menu">
       <p class="menu-heading" v-if="!isCollapsed">GENERAL</p>
-      <SideBarItem icon="fas fa-home" text="Dashboard" />
-      <SideBarItem icon="fas fa-box" text="Product" />
-      <SideBarItem icon="fas fa-warehouse" text="Inventory" />
-      <SideBarItem icon="fas fa-users" text="Customers" />
-      <SideBarItem icon="fas fa-star" text="Review" />
-      <SideBarItem icon="fas fa-credit-card" text="Payment" />
-      <SideBarItem icon="fas fa-plug" text="Integration" />
+      <SideBarItem
+        icon="fas fa-home"
+        text="Dashboard"
+        :isActive="activeTab === 'Dashboard'"
+        @setActive="setActiveTab('Dashboard')"
+      />
+      <SideBarItem
+        icon="fas fa-box"
+        text="Product"
+        :isActive="activeTab === 'Product'"
+        @setActive="setActiveTab('Product')"
+      />
+      <SideBarItem
+        icon="fas fa-warehouse"
+        text="Inventory"
+        :isActive="activeTab === 'Inventory'"
+        @setActive="setActiveTab('Inventory')"
+      />
+      <SideBarItem
+        icon="fas fa-users"
+        text="Customers"
+        :isActive="activeTab === 'Customers'"
+        @setActive="setActiveTab('Customers')"
+      />
+      <SideBarItem
+        icon="fas fa-star"
+        text="Review"
+        :isActive="activeTab === 'Review'"
+        @setActive="setActiveTab('Review')"
+      />
+      <SideBarItem
+        icon="fas fa-credit-card"
+        text="Payment"
+        :isActive="activeTab === 'Payment'"
+        @setActive="setActiveTab('Payment')"
+      />
+      <SideBarItem
+        icon="fas fa-plug"
+        text="Integration"
+        :isActive="activeTab === 'Integration'"
+        @setActive="setActiveTab('Integration')"
+      />
 
       <p class="menu-heading" v-if="!isCollapsed">ACCOUNT</p>
-      <SideBarItem icon="fas fa-cog" text="Settings" />
-      <SideBarItem icon="fas fa-question-circle" text="Help" />
-      <SideBarItem icon="fas fa-user-cog" text="Manage Users" />
+      <SideBarItem
+        icon="fas fa-cog"
+        text="Settings"
+        :isActive="activeTab === 'Settings'"
+        @setActive="setActiveTab('Settings')"
+      />
+      <SideBarItem
+        icon="fas fa-question-circle"
+        text="Help"
+        :isActive="activeTab === 'Help'"
+        @setActive="setActiveTab('Help')"
+      />
+      <SideBarItem
+        icon="fas fa-user-cog"
+        text="Manage Users"
+        :isActive="activeTab === 'Manage Users'"
+        @setActive="setActiveTab('Manage Users')"
+      />
     </nav>
 
     <!-- Logout Button -->
     <div class="logout">
-      <SideBarItem icon="fas fa-sign-out-alt" text="Logout" />
+      <SideBarItem
+        icon="fas fa-sign-out-alt"
+        text="Logout"
+        :isActive="activeTab === 'Logout'"
+        @setActive="setActiveTab('Logout')"
+      />
     </div>
   </aside>
 </template>
@@ -44,11 +99,15 @@ export default {
   data() {
     return {
       isCollapsed: false,
+      activeTab: "Dashboard", // Default active tab
     };
   },
   methods: {
     toggleSidebar() {
       this.isCollapsed = !this.isCollapsed;
+    },
+    setActiveTab(tab) {
+      this.activeTab = tab;
     },
   },
 };
@@ -75,7 +134,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px 30px 10px;
+  padding: 20px 10px 30px 10px;
   font-size: 16px;
 }
 .logo {
@@ -94,7 +153,6 @@ export default {
   cursor: pointer;
   color: #8a8c8b;
   font-size: 16px;
-  padding-right: 10px;
 }
 
 /* Menu */
