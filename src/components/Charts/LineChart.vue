@@ -1,22 +1,16 @@
 <template>
   <div class="chart-container">
-    <LineChart
-      ref="lineChart"
-      :chart-data="chartData"
-      :chart-options="chartOptions"
-    />
+    <canvas ref="chartCanvas"></canvas>
   </div>
 </template>
 
 <script>
-import { defineComponent, reactive, onMounted } from "vue";
+import { defineComponent, reactive, onMounted, ref, watch } from "vue";
 import { Chart, registerables } from "chart.js";
-import { LineChart } from "vue-chart-3";
 
 Chart.register(...registerables);
 
 export default defineComponent({
-  components: { LineChart },
   setup() {
     const chartData = reactive({
       labels: [
@@ -32,62 +26,104 @@ export default defineComponent({
         {
           label: "Orders",
           data: [2000, 4000, 3000, 6000, 5000, 8000, 7000],
-          borderColor: "#2E7D32", // Dark Green
+          borderColor: "#2E7D32",
           backgroundColor: "rgba(46, 125, 50, 0.2)",
           borderWidth: 2,
-          tension: 0.4, // Smooth curves
+          tension: 0.4,
+          pointRadius: 0,
         },
         {
           label: "Income Growth",
           data: [1000, 2000, 1500, 3500, 2500, 4500, 4000],
-          borderColor: "#81C784", // Light Green
+          borderColor: "#81C784",
           backgroundColor: "rgba(129, 199, 132, 0.2)",
           borderWidth: 2,
           tension: 0.4,
+          pointRadius: 0,
         },
       ],
     });
 
     const chartOptions = {
       responsive: true,
-      maintainAspectRatio: false, // Allow manual height control
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true,
           min: 0,
           max: 10000,
           ticks: {
-            callback: (value) => `${value / 1000}K`, // Format as 0K, 10K
+            stepSize: 2000,
+            callback: (value) => `${value / 1000}K`,
           },
           grid: {
-            display: false, // No horizontal grid lines
+            display: false,
+            drawBorder: false,
+            drawTicks: false,
           },
         },
         x: {
           grid: {
-            display: false,
+            display: true,
+            drawBorder: false,
+            drawTicks: false,
           },
+          offset: true,
         },
       },
       plugins: {
         legend: {
           display: true,
           position: "top",
+          labels: {
+            font: {
+              family: "Poppins",
+            },
+            boxWidth: 20,
+            boxHeight: 10,
+            padding: 10,
+            usePointStyle: true,
+          },
+          onClick: (e, legendItem, legend) => {
+            const index = legendItem.datasetIndex;
+            const chart = legend.chart;
+            const dataset = chart.data.datasets[index];
+            dataset.hidden = !dataset.hidden;
+            chart.update();
+          },
         },
       },
     };
 
-    // On mounted, target the canvas to apply custom styles
+    const chartCanvas = ref(null);
+    let chartInstance = null;
+
     onMounted(() => {
-      const canvas = document.querySelector("canvas");
-      if (canvas) {
-        canvas.style.maxHeight = "250px";
-        canvas.style.width = "100%"; // Optionally set width as well if you need
-        canvas.style.objectFit = "cover"; // Ensures proper scaling within the max-height
+      if (chartCanvas.value) {
+        chartInstance = new Chart(chartCanvas.value, {
+          type: "line",
+          data: chartData,
+          options: chartOptions,
+        });
       }
     });
 
-    return { chartData, chartOptions };
+    watch(
+      () => chartCanvas.value,
+      (newCanvas) => {
+        if (newCanvas && chartInstance) {
+          chartInstance.destroy();
+          chartInstance = new Chart(newCanvas, {
+            type: "line",
+            data: chartData,
+            options: chartOptions,
+          });
+        }
+      },
+      { immediate: true }
+    );
+
+    return { chartCanvas };
   },
 });
 </script>
@@ -95,5 +131,11 @@ export default defineComponent({
 <style scoped>
 .chart-container {
   width: 100%;
+}
+
+canvas {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 </style>

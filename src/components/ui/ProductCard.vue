@@ -104,7 +104,7 @@ export default {
 .item-row {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .item-image {
