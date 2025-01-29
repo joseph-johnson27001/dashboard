@@ -73,6 +73,13 @@ export default {
           percentage: "- 12.42%",
           backgroundColor: "#f6eced",
         },
+        {
+          title: "Average Order Value",
+          value: "$320.75",
+          percentage: "8.2%",
+          backgroundColor: "#f5f7f6",
+          additionalValue: "(+5.60%)",
+        },
       ],
       cardRows: [
         [{ component: "SummaryCard" }, { component: "ProductCard" }],
@@ -92,7 +99,7 @@ export default {
 
 .stat-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   width: 100%;
 }
