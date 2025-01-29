@@ -2,7 +2,7 @@
   <div class="statistics-area">
     <div class="stat-cards">
       <StatCard
-        title="E-commerce Revenue"
+        title="Revenue"
         value="$245,450"
         percentage="14.9%"
         backgroundColor="#fcf0e4"
@@ -15,14 +15,14 @@
         backgroundColor="#edf5e8"
       />
       <StatCard
-        title="Repeat Purchase Rate"
+        title="Purchase Rate"
         value="75.12%"
         percentage="25.4%"
         backgroundColor="#eaf0fe"
         additionalValue="(+20.11%)"
       />
       <StatCard
-        title="Average Order Value"
+        title="Average Value"
         value="$2,412.23"
         percentage="35.2%"
         backgroundColor="#ecf5f4"
