@@ -3,17 +3,18 @@
     <!-- Top Section with Logo and Toggle Button -->
     <div class="sidebar-header">
       <div class="logo">
-        <span class="icon">💚</span>
+        <span class="icon" v-if="!isCollapsed">💚</span>
         <span v-if="!isCollapsed" class="dashboard-name">Dashboard</span>
       </div>
       <button class="toggle-btn" @click="toggleSidebar">
-        <i :class="isCollapsed ? 'fas fa-bars' : 'fas fa-chevron-left'"></i>
+        <i class="fas fa-bars"></i>
+        <!-- Always show the hamburger icon -->
       </button>
     </div>
 
     <!-- Navigation Menu -->
     <nav class="menu">
-      <p class="menu-heading">GENERAL</p>
+      <p class="menu-heading" v-if="!isCollapsed">GENERAL</p>
       <SideBarItem icon="fas fa-home" text="Dashboard" />
       <SideBarItem icon="fas fa-box" text="Product" />
       <SideBarItem icon="fas fa-warehouse" text="Inventory" />
@@ -22,7 +23,7 @@
       <SideBarItem icon="fas fa-credit-card" text="Payment" />
       <SideBarItem icon="fas fa-plug" text="Integration" />
 
-      <p class="menu-heading">ACCOUNT</p>
+      <p class="menu-heading" v-if="!isCollapsed">ACCOUNT</p>
       <SideBarItem icon="fas fa-cog" text="Settings" />
       <SideBarItem icon="fas fa-question-circle" text="Help" />
       <SideBarItem icon="fas fa-user-cog" text="Manage Users" />
@@ -58,7 +59,7 @@ export default {
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: #1e1e2f;
+  background-color: #15161b;
   color: white;
   display: flex;
   flex-direction: column;
@@ -74,26 +75,26 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 20px 0px 30px 10px;
+  font-size: 16px;
 }
 .logo {
   display: flex;
   align-items: center;
 }
-.logo .icon {
-  font-size: 24px;
-}
+
 .dashboard-name {
-  margin-left: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  margin-left: 5px;
+  font-weight: 100;
 }
 .toggle-btn {
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 18px;
+  color: #8a8c8b;
+  font-size: 16px;
+  padding-right: 10px;
 }
 
 /* Menu */
@@ -102,13 +103,13 @@ export default {
   padding: 15px 0;
 }
 .menu-heading {
-  padding: 10px 20px;
+  padding: 0px 15px;
   font-size: 12px;
   text-transform: uppercase;
   opacity: 0.7;
 }
 .logout {
   margin-top: auto;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 </style>
