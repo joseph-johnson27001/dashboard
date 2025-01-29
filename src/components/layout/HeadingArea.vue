@@ -31,6 +31,7 @@ export default {
 
 .welcome-text {
   flex-grow: 1;
+  margin-bottom: 0px;
 }
 
 .welcome-text h1 {
@@ -43,7 +44,7 @@ export default {
 .welcome-text p {
   font-size: 14px;
   color: #555;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px 0px 0px;
 }
 
 .buttons {

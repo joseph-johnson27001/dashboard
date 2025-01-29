@@ -54,8 +54,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 20px;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border-radius: 12px;
   border: 1px solid #eee;
 }
 
@@ -73,7 +73,7 @@ export default {
 .card-value {
   font-size: 22px;
   font-weight: 600;
-  margin: 5px 0px 15px 0px;
+  margin: 5px 0px 10px 0px;
 }
 
 .card-footer {

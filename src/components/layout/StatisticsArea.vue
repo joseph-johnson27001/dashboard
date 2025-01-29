@@ -2,55 +2,20 @@
   <div class="statistics-area">
     <div class="stat-cards">
       <StatCard
-        title="Revenue"
-        value="$245,450"
-        percentage="14.9%"
-        backgroundColor="#fcf0e4"
-        additionalValue="(+43.21%)"
-      />
-      <StatCard
-        title="New Customers"
-        value="684"
-        percentage="- 8.6%"
-        backgroundColor="#edf5e8"
-      />
-      <StatCard
-        title="Purchase Rate"
-        value="75.12%"
-        percentage="25.4%"
-        backgroundColor="#eaf0fe"
-        additionalValue="(+20.11%)"
-      />
-      <StatCard
-        title="Average Value"
-        value="$2,412.23"
-        percentage="35.2%"
-        backgroundColor="#ecf5f4"
-        additionalValue="(+$754)"
-      />
-      <StatCard
-        title="Conversion Rate"
-        value="32.65%"
-        percentage="- 12.42%"
-        backgroundColor="#f6eced"
+        v-for="(stat, index) in stats"
+        :key="index"
+        :title="stat.title"
+        :value="stat.value"
+        :percentage="stat.percentage"
+        :backgroundColor="stat.backgroundColor"
+        :additionalValue="stat.additionalValue"
       />
     </div>
   </div>
   <div class="cards-layout">
-    <div class="card-row">
-      <div>
-        <SummaryCard />
-      </div>
-      <div>
-        <ProductCard />
-      </div>
-    </div>
-    <div class="card-row">
-      <div>
-        <RecentOrderCard />
-      </div>
-      <div>
-        <WeeklyCustomerCard />
+    <div class="card-row" v-for="(row, rowIndex) in cardRows" :key="rowIndex">
+      <div v-for="(card, cardIndex) in row" :key="cardIndex">
+        <component :is="card.component" />
       </div>
     </div>
   </div>
@@ -71,6 +36,49 @@ export default {
     ProductCard,
     RecentOrderCard,
     WeeklyCustomerCard,
+  },
+  data() {
+    return {
+      stats: [
+        {
+          title: "Revenue",
+          value: "$245,450",
+          percentage: "14.9%",
+          backgroundColor: "#fcf0e4",
+          additionalValue: "(+43.21%)",
+        },
+        {
+          title: "New Customers",
+          value: "684",
+          percentage: "- 8.6%",
+          backgroundColor: "#edf5e8",
+        },
+        {
+          title: "Purchase Rate",
+          value: "75.12%",
+          percentage: "25.4%",
+          backgroundColor: "#eaf0fe",
+          additionalValue: "(+20.11%)",
+        },
+        {
+          title: "Average Value",
+          value: "$2,412.23",
+          percentage: "35.2%",
+          backgroundColor: "#ecf5f4",
+          additionalValue: "(+$754)",
+        },
+        {
+          title: "Conversion Rate",
+          value: "32.65%",
+          percentage: "- 12.42%",
+          backgroundColor: "#f6eced",
+        },
+      ],
+      cardRows: [
+        [{ component: "SummaryCard" }, { component: "ProductCard" }],
+        [{ component: "RecentOrderCard" }, { component: "WeeklyCustomerCard" }],
+      ],
+    };
   },
 };
 </script>
@@ -97,7 +105,7 @@ export default {
 
 .card-row {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 3fr 1fr;
   margin: 20px 0px;
   gap: 20px;
 }
