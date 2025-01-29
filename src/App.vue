@@ -34,7 +34,6 @@ body {
 
 .main-content {
   flex-grow: 1;
-  padding: 20px;
   background: #f4f4f4;
   overflow-y: auto;
 }

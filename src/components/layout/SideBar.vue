@@ -75,7 +75,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .logo {
   display: flex;

@@ -29,5 +29,6 @@ export default {
 .sidebar-item i {
   width: 25px;
   text-align: center;
+  margin-right: 5px;
 }
 </style>
