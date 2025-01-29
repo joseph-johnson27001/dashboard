@@ -75,13 +75,12 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
 }
 
 .title {
   font-size: 16px;
-  font-weight: bold;
-  color: black;
+  font-weight: 400;
+  color: #15161b;
 }
 
 .three-dots {
@@ -123,7 +122,7 @@ export default {
 .item-name {
   font-size: 16px;
   font-weight: 400;
-  color: black;
+  color: #15161b;
   margin: 0;
   cursor: pointer;
 }

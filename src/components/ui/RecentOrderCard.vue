@@ -116,8 +116,8 @@ export default {
 
 .title {
   font-size: 16px;
-  font-weight: bold;
-  color: black;
+  font-weight: 400;
+  color: #15161b;
 }
 
 .view-all-button {

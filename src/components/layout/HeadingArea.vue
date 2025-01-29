@@ -64,14 +64,14 @@ button {
 }
 
 .view-all-time {
-  background-color: black;
+  background-color: #15161b;
   color: white;
   border: none;
 }
 
 .previous-year {
   background-color: white;
-  color: #000;
+  color: #15161b;
   border: 1px solid #ccc;
 }
 

@@ -47,13 +47,12 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .title {
   font-size: 16px;
-  font-weight: bold;
-  color: black;
+  font-weight: 400;
+  color: #15161b;
 }
 
 /* Dropdown */

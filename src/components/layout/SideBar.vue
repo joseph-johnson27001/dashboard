@@ -99,7 +99,7 @@ export default {
   data() {
     return {
       isCollapsed: false,
-      activeTab: "Dashboard", // Default active tab
+      activeTab: "Dashboard",
     };
   },
   methods: {
