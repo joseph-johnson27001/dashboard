@@ -55,7 +55,8 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
 }
 
 .card-header {

@@ -36,15 +36,41 @@
       />
     </div>
   </div>
+  <div class="cards-layout">
+    <div class="card-row">
+      <div>
+        <SummaryCard />
+      </div>
+      <div>
+        <ProductCard />
+      </div>
+    </div>
+    <div class="card-row">
+      <div>
+        <RecentOrderCard />
+      </div>
+      <div>
+        <WeeklyCustomerCard />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import StatCard from "@/components/ui/StatCard.vue";
+import SummaryCard from "../ui/SummaryCard.vue";
+import ProductCard from "../ui/ProductCard.vue";
+import RecentOrderCard from "../ui/RecentOrderCard.vue";
+import WeeklyCustomerCard from "../ui/WeeklyCustomerCard.vue";
 
 export default {
   name: "StatisticsArea",
   components: {
     StatCard,
+    SummaryCard,
+    ProductCard,
+    RecentOrderCard,
+    WeeklyCustomerCard,
   },
 };
 </script>
@@ -61,5 +87,18 @@ export default {
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   width: 100%;
+}
+
+/* Second area */
+
+.cards-layout {
+  margin-top: 10px;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin: 20px 0px;
+  gap: 20px;
 }
 </style>
