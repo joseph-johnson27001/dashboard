@@ -51,11 +51,11 @@ export default {
           orders: 30,
           image: "/images/ProfilePhoto3.jpg",
         },
-        {
-          name: "Lewis Colton",
-          orders: 32,
-          image: "/images/ProfilePhoto2.jpg",
-        },
+        // {
+        //   name: "Lewis Colton",
+        //   orders: 32,
+        // image: "/images/ProfilePhoto2.jpg",
+        // },
       ],
     };
   },
@@ -98,6 +98,8 @@ export default {
 .customers {
   display: flex;
   flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .customer-row {
@@ -107,8 +109,8 @@ export default {
 }
 
 .profile-image {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-size: cover;
   background-position: center;

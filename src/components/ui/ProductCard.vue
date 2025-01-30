@@ -73,6 +73,7 @@ export default {
   border: 1px solid #eee;
   border-radius: 12px;
   background-color: white;
+  height: 350px;
 }
 
 .header {
@@ -102,6 +103,7 @@ export default {
 .items {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 .item-row {
@@ -111,8 +113,8 @@ export default {
 }
 
 .item-image {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 8px;
   background-size: cover;
   background-position: center;
@@ -126,7 +128,7 @@ export default {
 }
 
 .item-name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #15161b;
   margin: 0;

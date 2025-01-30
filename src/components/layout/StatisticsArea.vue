@@ -91,6 +91,7 @@ export default {
 </script>
 
 <style scoped>
+/* General layout styling */
 .statistics-area {
   display: flex;
   justify-content: center;
@@ -104,8 +105,7 @@ export default {
   width: 100%;
 }
 
-/* Second area */
-
+/* Second area: main cards */
 .card {
   height: 350px;
   margin-bottom: 20px;
@@ -118,7 +118,51 @@ export default {
 .card-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 20px 0px;
   gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1400px) {
+  /* Top stat cards: switch to 3 columns */
+  .stat-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Main card rows: change from 2 cards per row to 1 card per row */
+}
+@media (max-width: 1200px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  .card-row {
+    margin-bottom: 0px;
+    gap: 0px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Top stat cards: switch to 2 columns */
+  .stat-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Main card rows: stack cards in a single column */
+  .card-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Stat cards: Stack the cards in a single column */
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Main card rows: Stack cards in a single column */
+  .card-row {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

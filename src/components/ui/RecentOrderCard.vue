@@ -15,7 +15,7 @@
         <tr>
           <th>Product</th>
           <th>Customer</th>
-          <th>Order ID</th>
+          <th>ID</th>
           <th>Date</th>
           <th>Status</th>
         </tr>
@@ -64,7 +64,7 @@ export default {
           image: "images/items/Smartphone.jpg",
           customer: "Alice Johnson",
           orderId: "2345",
-          date: "27 Jun 2025",
+          date: "27/06/2025",
           status: "Pending",
         },
         {
@@ -72,7 +72,7 @@ export default {
           image: "images/items/laptop.png",
           customer: "Michael Smith",
           orderId: "6789",
-          date: "25 Jun 2025",
+          date: "25/06/2025",
           status: "Cancelled",
         },
         {
@@ -80,7 +80,7 @@ export default {
           image: "images/items/GamingMouse.png",
           customer: "Samantha Lee",
           orderId: "3456",
-          date: "22 Jun 2025",
+          date: "22/06/2025",
           status: "Shipped",
         },
       ],
@@ -164,8 +164,8 @@ export default {
 }
 
 .product-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   margin-right: 10px;
 }
