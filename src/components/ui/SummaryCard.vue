@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="summary-card">
     <!-- Header Section -->
     <div class="header">
       <h3 class="title">Summary</h3>
@@ -69,13 +69,6 @@ export default {
 
 <style scoped>
 /* Card Styling */
-.card {
-  padding: 20px 20px 0px 20px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background-color: white;
-  height: 350px;
-}
 
 /* Header */
 .header {

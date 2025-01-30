@@ -91,7 +91,6 @@ export default {
 </script>
 
 <style scoped>
-/* General layout styling */
 .statistics-area {
   display: flex;
   justify-content: center;
@@ -105,8 +104,12 @@ export default {
   width: 100%;
 }
 
-/* Second area: main cards */
 .card {
+  padding: 20px 20px 0px 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: white;
+  height: 350px;
   margin-bottom: 10px;
 }
 
@@ -120,14 +123,10 @@ export default {
   grid-template-columns: 3fr 2fr;
 }
 
-/* Responsive Breakpoints */
 @media (max-width: 1400px) {
-  /* Top stat cards: switch to 3 columns */
   .stat-cards {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /* Main card rows: change from 2 cards per row to 1 card per row */
 }
 @media (max-width: 1200px) {
   .card-row {
@@ -136,24 +135,20 @@ export default {
 }
 
 @media (max-width: 900px) {
-  /* Top stat cards: switch to 2 columns */
   .stat-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Main card rows: stack cards in a single column */
   .card-row {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  /* Stat cards: Stack the cards in a single column */
+@media (max-width: 700px) {
   .stat-cards {
     grid-template-columns: 1fr;
   }
 
-  /* Main card rows: Stack cards in a single column */
   .card-row {
     grid-template-columns: 1fr;
   }

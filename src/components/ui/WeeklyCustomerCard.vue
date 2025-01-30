@@ -63,14 +63,6 @@ export default {
 </script>
 
 <style scoped>
-.weekly-orders-card {
-  padding: 20px 20px 0px 20px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background-color: white;
-  height: 315px;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
