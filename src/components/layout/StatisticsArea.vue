@@ -107,8 +107,7 @@ export default {
 
 /* Second area: main cards */
 .card {
-  height: 350px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .cards-layout {
@@ -116,10 +115,9 @@ export default {
 }
 
 .card-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
 }
 
 /* Responsive Breakpoints */
@@ -132,12 +130,7 @@ export default {
   /* Main card rows: change from 2 cards per row to 1 card per row */
 }
 @media (max-width: 1200px) {
-  .card {
-    margin-bottom: 20px;
-  }
   .card-row {
-    margin-bottom: 0px;
-    gap: 0px;
     grid-template-columns: 1fr;
   }
 }

@@ -103,8 +103,9 @@ export default {
 .recent-orders-card {
   padding: 20px 20px 0px 20px;
   border: 1px solid #eee;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: white;
+  height: 315px;
 }
 
 /* Header */
@@ -178,24 +179,28 @@ export default {
 .customer-name {
   color: #007bff;
   cursor: pointer;
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
 
 /* Order ID */
 .order-id {
   color: #333;
-  font-weight: 500;
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
 
 /* Order Date */
 .order-date {
-  color: #777;
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
 
 /* Status Tags */
 .status-tag {
   padding: 5px 10px;
   border-radius: 12px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
 }
 

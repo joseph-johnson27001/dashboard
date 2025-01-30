@@ -83,4 +83,22 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 800px) {
+  .heading-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    margin-top: 15px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  button {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
 </style>

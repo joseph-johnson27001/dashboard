@@ -9,13 +9,13 @@
 
 <script>
 import SideBar from "@/components/layout/SideBar.vue";
-import DashboardView from "@/views/DashboardView.vue"; // Import the DashboardView
+import DashboardView from "@/views/DashboardView.vue";
 
 export default {
   name: "App",
   components: {
     SideBar,
-    DashboardView, // Register the DashboardView component
+    DashboardView,
   },
 };
 </script>
