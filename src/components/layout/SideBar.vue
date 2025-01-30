@@ -152,7 +152,6 @@ export default {
   font-size: 16px;
 }
 
-/* Menu */
 .menu {
   flex-grow: 1;
   padding: 15px 0;
@@ -168,9 +167,8 @@ export default {
   margin-bottom: 10px;
 }
 
-/* Fix icon alignment when collapsed */
 .sidebar.collapsed .menu i {
-  font-size: 24px; /* Bigger icons when collapsed */
+  font-size: 24px;
   display: block;
   text-align: center;
   width: 100%;
@@ -178,7 +176,7 @@ export default {
 }
 
 .sidebar.collapsed .menu-heading {
-  display: none; /* Hide section headings in collapsed mode */
+  display: none;
 }
 
 .sidebar.collapsed .sidebar-header .logo {
@@ -213,5 +211,17 @@ export default {
   height: 35px;
   width: 70px;
   margin: 0px;
+}
+
+.sidebar.collapsed .logo {
+  display: none;
+}
+
+.sidebar.collapsed .toggle-btn {
+  display: flex;
+  justify-self: center;
+  margin: auto;
+  width: 25px;
+  height: 25px;
 }
 </style>
