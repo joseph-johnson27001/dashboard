@@ -100,7 +100,7 @@ export default {
 .stat-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  gap: 10px;
   width: 100%;
 }
 
@@ -141,7 +141,7 @@ export default {
 
   .card-row {
     grid-template-columns: 1fr;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 }
 
@@ -152,6 +152,7 @@ export default {
 
   .card-row {
     grid-template-columns: 1fr;
+    margin-bottom: 10px;
   }
 }
 </style>
