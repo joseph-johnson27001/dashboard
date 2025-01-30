@@ -4,14 +4,20 @@
     <div class="header">
       <h3 class="title">Summary</h3>
       <div class="dropdown">
-        <select v-model="selectedRange">
-          <option>Last 7 Days</option>
-          <option>Last 30 Days</option>
-          <option>Last 90 Days</option>
-          <option>Last 6 Months</option>
-          <option>Last 1 Year</option>
-        </select>
-        <span class="chevron">▼</span>
+        <div class="dropdown-trigger" @click="toggleDropdown">
+          <span>{{ selectedRange }}</span>
+          <span class="chevron">▼</span>
+        </div>
+        <div v-if="dropdownVisible" class="dropdown-options">
+          <div
+            v-for="(option, index) in options"
+            :key="index"
+            class="dropdown-option"
+            @click="selectRange(option)"
+          >
+            {{ option }}
+          </div>
+        </div>
       </div>
     </div>
 
@@ -32,7 +38,31 @@ export default {
   components: { LineChart },
   setup() {
     const selectedRange = ref("Last 7 Days");
-    return { selectedRange };
+    const dropdownVisible = ref(false);
+
+    const options = [
+      "Last 7 Days",
+      "Last 30 Days",
+      "Last 6 Months",
+      "Last 1 Year",
+    ];
+
+    const toggleDropdown = () => {
+      dropdownVisible.value = !dropdownVisible.value;
+    };
+
+    const selectRange = (option) => {
+      selectedRange.value = option;
+      dropdownVisible.value = false;
+    };
+
+    return {
+      selectedRange,
+      dropdownVisible,
+      options,
+      toggleDropdown,
+      selectRange,
+    };
   },
 };
 </script>
@@ -63,56 +93,55 @@ export default {
 /* Dropdown */
 .dropdown {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 150px;
+}
+
+.dropdown-trigger {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f7f7f7;
+  background-color: #fefefe;
   border: 1px solid #eee;
   border-radius: 8px;
-  padding: 5px 10px;
-  position: relative;
-  width: 150px; /* Set a fixed width for consistency */
-}
-
-select {
-  background: transparent;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none;
-  padding: 5px 10px;
+  padding: 5px 0px;
   width: 100%;
-  color: #15161b;
-  font-weight: 400;
+  cursor: pointer;
+  padding-left: 10px;
 }
 
-select:focus {
-  outline: none;
-}
-
-/* Custom Arrow (chevron) */
 .chevron {
   font-size: 12px;
-  margin-left: -20px;
-  pointer-events: none;
+  margin-right: 10px;
   color: #555;
 }
 
-/* Style for select options to match the select box */
-option {
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 160px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.dropdown-option {
   padding: 10px 15px;
   background-color: white;
   color: #15161b;
-  border: 1px solid #eee;
-  border-radius: 8px;
   font-size: 14px;
+  cursor: pointer;
 }
 
-option:hover {
+.dropdown-option:hover {
   background-color: #f1f1f1;
-}
-
-/* Remove default dropdown arrow */
-select::-ms-expand {
-  display: none;
 }
 
 /* Divider */
