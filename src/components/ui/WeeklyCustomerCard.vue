@@ -39,22 +39,22 @@ export default {
         {
           name: "Alice Johnson",
           orders: 25,
-          image: "https://via.placeholder.com/50",
+          image: "/images/ProfilePhoto1.jpg", // Relative to public/
         },
         {
           name: "Michael Smith",
           orders: 18,
-          image: "https://via.placeholder.com/50",
+          image: "/images/ProfilePhoto4.jpg",
         },
         {
           name: "Samantha Lee",
           orders: 30,
-          image: "https://via.placeholder.com/50",
+          image: "/images/ProfilePhoto3.jpg",
         },
         // {
         //   name: "Lewis Colton",
         //   orders: 32,
-        //   image: "https://via.placeholder.com/50",
+        // image: "/images/ProfilePhoto2.jpg",
         // },
       ],
     };

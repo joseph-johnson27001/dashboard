@@ -17,7 +17,7 @@
       <div class="icon-circle"><i class="fa fa-alt fa-map-pin"></i></div>
       <!-- Pin icon -->
       <div class="profile-circle">
-        <img src="profile.jpg" alt="Profile" />
+        <img src="/images/ProfilePhoto3.jpg" alt="Profile" />
         <!-- Profile Image -->
       </div>
     </div>
@@ -88,19 +88,19 @@ export default {
   border-radius: 50%;
   margin-left: 10px;
   font-size: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   color: #555;
 }
 
 .profile-circle {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   margin-left: 15px;
 }
 
