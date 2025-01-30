@@ -39,7 +39,7 @@ export default {
         {
           name: "Alice Johnson",
           orders: 25,
-          image: "/images/ProfilePhoto1.jpg", // Relative to public/
+          image: "/images/ProfilePhoto1.jpg",
         },
         {
           name: "Michael Smith",
@@ -51,11 +51,11 @@ export default {
           orders: 30,
           image: "/images/ProfilePhoto3.jpg",
         },
-        // {
-        //   name: "Lewis Colton",
-        //   orders: 32,
-        // image: "/images/ProfilePhoto2.jpg",
-        // },
+        {
+          name: "Lewis Colton",
+          orders: 32,
+          image: "/images/ProfilePhoto2.jpg",
+        },
       ],
     };
   },

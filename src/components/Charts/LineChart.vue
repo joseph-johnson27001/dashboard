@@ -138,7 +138,6 @@ export default defineComponent({
 }
 
 canvas {
-  max-height: 250px;
   width: 100%;
 }
 </style>

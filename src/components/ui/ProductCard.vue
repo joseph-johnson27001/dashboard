@@ -13,7 +13,11 @@
     <div class="items">
       <!-- Loop through products using v-for -->
       <div class="item-row" v-for="(item, index) in items" :key="index">
-        <div class="item-image"></div>
+        <div
+          class="item-image"
+          :style="{ backgroundImage: `url(${item.image})` }"
+        ></div>
+
         <!-- Placeholder for image -->
         <div class="item-details">
           <h4 class="item-name">{{ item.name }}</h4>
@@ -34,28 +38,28 @@ export default {
     return {
       items: [
         {
-          name: "Item 1",
+          name: "Gaming Mouse",
           id: 12345,
           sales: 128,
-          // image: "item1.jpg" // Optional: Link to image can be added here
+          image: "images/items/GamingMouse.png",
         },
         {
-          name: "Item 2",
+          name: "Smart Phone",
           id: 12346,
           sales: 142,
-          // image: "item2.jpg"
+          image: "images/items/Smartphone.jpg",
         },
         {
-          name: "Item 3",
+          name: "Headphones",
           id: 12347,
           sales: 150,
-          // image: "item3.jpg"
+          image: "images/items/Headphones.png",
         },
         {
-          name: "Item 4",
+          name: "Laptop",
           id: 12347,
           sales: 150,
-          // image: "item3.jpg"
+          image: "images/items/laptop.png",
         },
       ],
     };
@@ -107,10 +111,12 @@ export default {
 }
 
 .item-image {
-  width: 80px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
-  background-color: #e0e0e0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
   margin-right: 15px;
 }
