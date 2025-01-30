@@ -110,7 +110,6 @@ export default {
   border-radius: 8px;
   background-color: white;
   height: 350px;
-  margin-bottom: 10px;
 }
 
 .cards-layout {
@@ -118,9 +117,10 @@ export default {
 }
 
 .card-row {
-  gap: 20px;
   display: grid;
   grid-template-columns: 3fr 2fr;
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
 @media (max-width: 1400px) {
@@ -141,6 +141,7 @@ export default {
 
   .card-row {
     grid-template-columns: 1fr;
+    margin-bottom: 0px;
   }
 }
 
