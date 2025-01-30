@@ -8,7 +8,6 @@
       </div>
       <button class="toggle-btn" @click="toggleSidebar">
         <i class="fas fa-bars"></i>
-        <!-- Always show the hamburger icon -->
       </button>
     </div>
 
@@ -141,7 +140,6 @@ export default {
   display: flex;
   align-items: center;
 }
-
 .dashboard-name {
   margin-left: 5px;
   font-weight: 100;
@@ -149,7 +147,6 @@ export default {
 .toggle-btn {
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
   color: #8a8c8b;
   font-size: 16px;
@@ -169,5 +166,52 @@ export default {
 .logout {
   margin-top: auto;
   margin-bottom: 10px;
+}
+
+/* Fix icon alignment when collapsed */
+.sidebar.collapsed .menu i {
+  font-size: 24px; /* Bigger icons when collapsed */
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.sidebar.collapsed .menu-heading {
+  display: none; /* Hide section headings in collapsed mode */
+}
+
+.sidebar.collapsed .sidebar-header .logo {
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar.collapsed .menu i {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.sidebar.collapsed .sidebar-header .dashboard-name {
+  display: none;
+}
+
+.sidebar.collapsed .menu {
+  padding: 0;
+}
+
+.sidebar.collapsed .sidebar-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 10px;
+  height: 35px;
+  width: 70px;
+  margin: 0px;
 }
 </style>

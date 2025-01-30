@@ -72,6 +72,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0px;
 }
 
 .title {
@@ -95,13 +96,13 @@ export default {
 .items {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
 }
 
 .item-row {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0px 10px 0px;
 }
 
 .item-image {

@@ -16,13 +16,15 @@
         v-for="(customer, index) in customers"
         :key="index"
       >
-        <div
-          class="profile-image"
-          :style="{ backgroundImage: `url(${customer.image})` }"
-        ></div>
-        <div class="customer-details">
-          <h4 class="customer-name">{{ customer.name }}</h4>
-          <p class="order-count">{{ customer.orders }} orders</p>
+        <div style="display: flex; flex-direction: row">
+          <div
+            class="profile-image"
+            :style="{ backgroundImage: `url(${customer.image})` }"
+          ></div>
+          <div class="customer-details">
+            <h4 class="customer-name">{{ customer.name }}</h4>
+            <p class="order-count">{{ customer.orders }} orders</p>
+          </div>
         </div>
         <button class="view-button">View</button>
       </div>
@@ -51,11 +53,11 @@ export default {
           orders: 30,
           image: "/images/ProfilePhoto3.jpg",
         },
-        // {
-        //   name: "Lewis Colton",
-        //   orders: 32,
-        // image: "/images/ProfilePhoto2.jpg",
-        // },
+        {
+          name: "Charlotte Colton",
+          orders: 32,
+          image: "/images/ProfilePhoto2.jpg",
+        },
       ],
     };
   },
@@ -67,7 +69,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -91,19 +94,20 @@ export default {
 .customers {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
 }
 
 .customer-row {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .profile-image {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -111,10 +115,7 @@ export default {
   border: 1px solid #eee;
   background-color: #e0e0e0;
   cursor: pointer;
-}
-
-.customer-details {
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .customer-name {
@@ -123,16 +124,23 @@ export default {
   color: #15161b;
   cursor: pointer;
   margin: 0;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
 }
 
 .order-count {
   font-size: 12px;
   color: #888;
-  margin-top: 0px;
+  margin-top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .view-button {
-  padding: 10px 12px;
+  padding: 8px 12px;
   border: none;
   border-radius: 8px;
   color: #007bff;
@@ -140,5 +148,6 @@ export default {
   cursor: pointer;
   font-size: 14px;
   border: 1px solid #eee;
+  margin-left: 10px;
 }
 </style>

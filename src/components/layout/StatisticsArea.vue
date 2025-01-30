@@ -105,11 +105,10 @@ export default {
 }
 
 .card {
-  padding: 20px 20px 0px 20px;
+  padding: 10px 20px 0px 20px;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: white;
-  height: 350px;
 }
 
 .cards-layout {

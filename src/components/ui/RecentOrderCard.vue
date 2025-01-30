@@ -83,6 +83,14 @@ export default {
           date: "22/06/2025",
           status: "Shipped",
         },
+        {
+          product: "Headphones",
+          image: "images/items/Headphones.png",
+          customer: "Samantha Lee",
+          orderId: "3456",
+          date: "22/06/2025",
+          status: "Shipped",
+        },
       ],
     };
   },
@@ -142,13 +150,14 @@ export default {
   font-size: 14px;
   font-weight: bold;
   color: #333;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .orders-table td {
   padding: 10px 0;
   font-size: 14px;
   color: #555;
+  border-bottom: 1px solid #eee;
 }
 
 /* Product Image & Name */
@@ -158,8 +167,8 @@ export default {
 }
 
 .product-image {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 8px;
   margin-right: 10px;
 }
@@ -172,21 +181,21 @@ export default {
 .customer-name {
   color: #007bff;
   cursor: pointer;
-  font-size: 12px !important;
-  font-weight: 400 !important;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Order ID */
 .order-id {
   color: #333;
-  font-size: 12px !important;
-  font-weight: 400 !important;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Order Date */
 .order-date {
-  font-size: 12px !important;
-  font-weight: 400 !important;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Status Tags */
@@ -195,6 +204,10 @@ export default {
   border-radius: 12px;
   font-size: 12px;
   font-weight: 500;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Status Colors */
@@ -211,5 +224,39 @@ export default {
 .shipped {
   background-color: #d4edda;
   color: #155724;
+}
+
+@media (max-width: 768px) {
+  .orders-table th:nth-child(3),
+  .orders-table th:nth-child(4),
+  .orders-table td:nth-child(3),
+  .orders-table td:nth-child(4) {
+    display: none;
+  }
+
+  /* Smaller text for table cells */
+  .orders-table th,
+  .orders-table td {
+    font-size: 12px !important;
+  }
+
+  .product-image {
+    height: 35px;
+    width: 35px;
+  }
+
+  .product-name {
+    font-size: 12px;
+  }
+
+  .customer-name,
+  .order-id,
+  .order-date {
+    font-size: 10px;
+  }
+
+  .status-tag {
+    font-size: 10px;
+  }
 }
 </style>
