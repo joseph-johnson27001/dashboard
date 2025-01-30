@@ -44,7 +44,7 @@ export default {
           image: "images/items/GamingMouse.png",
         },
         {
-          name: "Smart Phone",
+          name: "Smartphone",
           id: 12346,
           sales: 142,
           image: "images/items/Smartphone.jpg",
@@ -111,8 +111,8 @@ export default {
 }
 
 .item-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   background-size: cover;
   background-position: center;

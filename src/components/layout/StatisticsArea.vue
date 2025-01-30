@@ -14,7 +14,7 @@
   </div>
   <div class="cards-layout">
     <div class="card-row" v-for="(row, rowIndex) in cardRows" :key="rowIndex">
-      <div v-for="(card, cardIndex) in row" :key="cardIndex">
+      <div v-for="(card, cardIndex) in row" :key="cardIndex" class="card">
         <component :is="card.component" />
       </div>
     </div>
@@ -106,13 +106,18 @@ export default {
 
 /* Second area */
 
+.card {
+  height: 350px;
+  margin-bottom: 20px;
+}
+
 .cards-layout {
   margin-top: 10px;
 }
 
 .card-row {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
   margin: 20px 0px;
   gap: 20px;
 }

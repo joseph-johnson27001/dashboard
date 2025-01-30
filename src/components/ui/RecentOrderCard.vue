@@ -60,7 +60,7 @@ export default {
     return {
       orders: [
         {
-          product: "Smartphone X",
+          product: "Smartphone",
           image: "images/items/Smartphone.jpg",
           customer: "Alice Johnson",
           orderId: "2345",

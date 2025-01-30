@@ -36,7 +36,7 @@ export default {
 <style scoped>
 /* Card Styling */
 .card {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   border: 1px solid #eee;
   border-radius: 12px;
   background-color: white;

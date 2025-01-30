@@ -46,7 +46,7 @@ export default defineComponent({
 
     const chartOptions = {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: false, // Allows the chart to fill its container
       scales: {
         y: {
           beginAtZero: true,
@@ -88,13 +88,6 @@ export default defineComponent({
             padding: 10,
             usePointStyle: true,
           },
-          onClick: (e, legendItem, legend) => {
-            const index = legendItem.datasetIndex;
-            const chart = legend.chart;
-            const dataset = chart.data.datasets[index];
-            dataset.hidden = !dataset.hidden;
-            chart.update();
-          },
         },
       },
     };
@@ -135,9 +128,12 @@ export default defineComponent({
 <style scoped>
 .chart-container {
   width: 100%;
+  position: relative;
+  height: 250px; /* Ensure chart takes available height within the parent */
 }
 
 canvas {
-  width: 100%;
+  width: 100% !important;
+  height: 100% !important; /* Allow canvas to fill its container */
 }
 </style>
