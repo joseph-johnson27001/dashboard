@@ -55,9 +55,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   padding: 15px 20px;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   border: 1px solid #ddd;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   color: #333;
 }
 
