@@ -136,33 +136,7 @@ export default {
   margin: 10px 0;
 }
 
-@media (max-width: 768px) {
-  .dropdown {
-    width: 130px;
-    margin-left: auto;
-  }
-
-  .dropdown-trigger {
-    padding: 5px 8px;
-    font-size: 12px;
-    width: 100px;
-  }
-
-  .dropdown-options {
-    width: 100%;
-  }
-
-  .dropdown-option {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .chevron {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .dropdown {
     margin-left: auto;
     width: 80px;

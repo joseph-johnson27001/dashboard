@@ -20,6 +20,7 @@
           <h4 class="item-name">{{ item.name }}</h4>
           <p class="item-id">ID: {{ item.id }}</p>
         </div>
+
         <div class="sales-container">
           <span class="sales-count">{{ item.sales }} sales</span>
         </div>
@@ -41,7 +42,7 @@ export default {
           image: "images/items/GamingMouse.png",
         },
         {
-          name: "Smartphone",
+          name: "Smart Phone",
           id: 12346,
           sales: 142,
           image: "images/items/Smartphone.jpg",
@@ -69,7 +70,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
+  margin: 0;
 }
 
 .title {
@@ -99,7 +100,7 @@ export default {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0;
 }
 
 .item-row:last-child {
@@ -132,7 +133,7 @@ export default {
 .item-id {
   font-size: 12px;
   color: #888;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .sales-container {
@@ -145,5 +146,63 @@ export default {
 .sales-count {
   font-size: 14px;
   color: #333;
+}
+
+@media (max-width: 350px) {
+  .header {
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .divider {
+    margin-top: 4px;
+  }
+
+  .item-row {
+    align-items: center;
+    padding: 10px 8px;
+  }
+
+  .item-name {
+    font-size: 12px !important;
+  }
+
+  .item-image {
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+  }
+
+  .item-details {
+    margin-left: 8px;
+  }
+
+  .sales-container {
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .sales-count {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 265px) {
+  .item-row {
+    justify-content: space-between;
+  }
+
+  .sales-container {
+    margin-top: 6px;
+    display: flex;
+    padding: 15px;
+  }
+  .item-details {
+    display: none;
+  }
 }
 </style>

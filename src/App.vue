@@ -50,14 +50,13 @@ body {
 
 @media (max-width: 350px) {
   div.card {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 
 @media (max-width: 550px) {
-  h3,
-  h4 {
+  h3 {
     font-size: 14px !important;
   }
   #side-bar {
