@@ -53,7 +53,7 @@ body {
     display: none;
   }
   #mobile-top-nav {
-    display: block;
+    display: flex;
   }
 }
 </style>
