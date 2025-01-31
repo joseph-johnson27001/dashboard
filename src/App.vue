@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SideBar />
+    <SideBar id="side-bar" />
     <div class="main-content">
       <DashboardView />
     </div>
@@ -39,5 +39,11 @@ body {
   flex-grow: 1;
   overflow-y: auto;
   width: 100%;
+}
+
+@media (max-width: 550px) {
+  #side-bar {
+    display: none;
+  }
 }
 </style>

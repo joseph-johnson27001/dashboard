@@ -9,16 +9,13 @@
     <!-- Divider -->
     <div class="divider"></div>
 
-    <!-- Rows of Items -->
     <div class="items">
-      <!-- Loop through products using v-for -->
       <div class="item-row" v-for="(item, index) in items" :key="index">
         <div
           class="item-image"
           :style="{ backgroundImage: `url(${item.image})` }"
         ></div>
 
-        <!-- Placeholder for image -->
         <div class="item-details">
           <h4 class="item-name">{{ item.name }}</h4>
           <p class="item-id">ID: {{ item.id }}</p>

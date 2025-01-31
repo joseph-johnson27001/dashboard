@@ -46,7 +46,7 @@ export default defineComponent({
 
     const chartOptions = {
       responsive: true,
-      maintainAspectRatio: false, // Allows the chart to fill its container
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true,
