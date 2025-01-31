@@ -102,6 +102,10 @@ export default {
   padding: 10px 0px 10px 0px;
 }
 
+.item-row:last-child {
+  border-bottom: none;
+}
+
 .item-image {
   width: 55px;
   height: 55px;

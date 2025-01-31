@@ -160,6 +160,10 @@ export default {
   border-bottom: 1px solid #eee;
 }
 
+.orders-table tr:last-child td {
+  border-bottom: none;
+}
+
 /* Product Image & Name */
 .product-info {
   display: flex;
