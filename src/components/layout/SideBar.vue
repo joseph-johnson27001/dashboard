@@ -135,7 +135,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10px 30px 10px;
+  padding: 20px 10px 10px 10px;
   font-size: 16px;
 }
 .logo {
