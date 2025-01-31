@@ -84,6 +84,7 @@ export default {
 
 .three-dots i {
   font-size: 14px;
+  color: grey;
 }
 
 .divider {
@@ -152,7 +153,6 @@ export default {
 
 @media (max-width: 350px) {
   .header {
-    align-items: flex-start;
     margin-bottom: 8px;
   }
 

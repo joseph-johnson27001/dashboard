@@ -80,6 +80,7 @@ export default {
 
 .three-dots i {
   font-size: 14px;
+  color: grey;
 }
 
 .divider {
