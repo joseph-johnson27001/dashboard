@@ -106,8 +106,9 @@ export default {
 
 .card {
   padding: 10px 20px 0px 20px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-radius: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .cards-layout {

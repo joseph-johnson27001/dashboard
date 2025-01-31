@@ -56,7 +56,7 @@ export default {
   justify-content: space-between;
   padding: 15px 20px;
   border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
 }
 
 .card-header {
