@@ -1,15 +1,12 @@
 <template>
   <div class="weekly-orders-card">
-    <!-- Top Heading Section -->
     <div class="header">
       <h3 class="title">Weekly Top Customers</h3>
       <span class="three-dots">...</span>
     </div>
 
-    <!-- Divider -->
     <div class="divider"></div>
 
-    <!-- Rows of Customers -->
     <div class="customers">
       <div
         class="customer-row"
@@ -149,5 +146,30 @@ export default {
   font-size: 14px;
   border: 1px solid #eee;
   margin-left: 10px;
+}
+
+@media (max-width: 350px) {
+  .customer-row {
+    align-items: flex-start;
+  }
+
+  .profile-image {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 8px;
+  }
+
+  .customer-name {
+    font-size: 13px;
+  }
+
+  .order-count {
+    font-size: 10px;
+  }
+
+  .view-button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
 }
 </style>

@@ -138,16 +138,18 @@ export default {
 
 @media (max-width: 768px) {
   .dropdown {
-    width: 120px;
+    width: 130px;
+    margin-left: auto;
   }
 
   .dropdown-trigger {
     padding: 5px 8px;
     font-size: 12px;
+    width: 100px;
   }
 
   .dropdown-options {
-    width: 130px;
+    width: 100%;
   }
 
   .dropdown-option {
@@ -162,16 +164,18 @@ export default {
 
 @media (max-width: 550px) {
   .dropdown {
-    width: 100px;
+    margin-left: auto;
+    width: 80px;
   }
 
   .dropdown-trigger {
     padding: 4px 6px;
     font-size: 12px;
+    width: 70px;
   }
 
   .dropdown-options {
-    width: 110px;
+    width: 100%;
   }
 
   .dropdown-option {
