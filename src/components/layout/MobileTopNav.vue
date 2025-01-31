@@ -71,7 +71,6 @@ export default {
   padding: 10px 15px;
   font-size: 16px;
   position: relative;
-  border-bottom: 1px solid #eee;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
