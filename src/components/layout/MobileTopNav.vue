@@ -68,7 +68,7 @@ export default {
   align-items: center;
   background-color: #15161b;
   color: white;
-  padding: 10px 15px;
+  padding: 15px 15px;
   font-size: 16px;
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
