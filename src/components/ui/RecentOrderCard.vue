@@ -230,21 +230,33 @@ export default {
   color: #155724;
 }
 
-@media (max-width: 768px) {
-  .orders-table th:nth-child(2),
-  .orders-table th:nth-child(3),
-  .orders-table th:nth-child(4),
-  .orders-table td:nth-child(2),
+tr {
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
   .orders-table td:nth-child(3),
+  .orders-table th:nth-child(3) {
+    display: none;
+  }
+  .orders-table th {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .orders-table th:nth-child(4),
   .orders-table td:nth-child(4) {
     display: none;
   }
 
   /* Smaller text for table cells */
-  .orders-table th,
-  .orders-table td {
-    font-size: 12px !important;
-  }
 
   .product-image {
     height: 35px;
@@ -263,6 +275,13 @@ export default {
 
   .status-tag {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .orders-table td:nth-child(2),
+  .orders-table th:nth-child(2) {
+    display: none;
   }
 }
 </style>

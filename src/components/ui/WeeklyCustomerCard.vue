@@ -148,6 +148,10 @@ export default {
   margin-left: 10px;
 }
 
+.customer-row {
+  cursor: pointer;
+}
+
 @media (max-width: 350px) {
   .customer-row {
     align-items: flex-start;

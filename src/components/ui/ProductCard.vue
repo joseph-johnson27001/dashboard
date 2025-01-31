@@ -101,6 +101,7 @@ export default {
   align-items: center;
   border-bottom: 1px solid #eee;
   padding: 10px 0;
+  cursor: pointer;
 }
 
 .item-row:last-child {

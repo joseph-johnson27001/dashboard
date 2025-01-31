@@ -129,11 +129,12 @@ export default defineComponent({
 .chart-container {
   width: 100%;
   position: relative;
-  height: 250px; /* Ensure chart takes available height within the parent */
+  padding: 10px 0px;
+  height: 280px;
 }
 
 canvas {
   width: 100% !important;
-  height: 100% !important; /* Allow canvas to fill its container */
+  height: 100% !important;
 }
 </style>

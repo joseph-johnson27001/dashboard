@@ -55,7 +55,7 @@ body {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   h3 {
     font-size: 14px !important;
   }
