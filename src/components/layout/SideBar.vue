@@ -122,8 +122,9 @@ export default {
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease;
-  overflow: scroll;
+  overflow-y: auto;
 }
+
 .sidebar.collapsed {
   width: 60px;
 }
