@@ -38,7 +38,7 @@ export default {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
-  color: #000;
+  color: #15161b;
 }
 
 .welcome-text p {

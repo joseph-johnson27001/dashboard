@@ -37,19 +37,20 @@ export default {
   align-items: center;
   color: #555;
   width: 100%;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
+  background-color: #eaf0fe;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #f4f7fe;
+  background-color: #fff;
   padding: 5px 10px;
   margin: 10px 20px;
   width: 30%;
   border-radius: 4px;
   font-size: 16px;
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   cursor: text;
 }
 
@@ -63,12 +64,18 @@ export default {
   border: none;
   background: transparent;
   font-size: 14px;
+  height: 100%;
   outline: none;
   font-family: "Poppins", sans-serif;
 }
 
 .search-bar input::placeholder {
-  color: #555;
+  color: #444;
+}
+
+.search-bar:focus-within {
+  border-color: #64b5f6;
+  box-shadow: 0 0 3px rgba(100, 181, 246, 0.75);
 }
 
 .user-icons {
@@ -88,8 +95,8 @@ export default {
   border-radius: 50%;
   margin-left: 10px;
   font-size: 12px;
-  border: 1px solid #eee;
-  color: #555;
+  border: 1px solid #aaa;
+  color: #15161b;
 }
 
 .profile-circle {
@@ -100,7 +107,7 @@ export default {
   align-items: center;
   background-color: white;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #aaa;
   margin-left: 15px;
 }
 

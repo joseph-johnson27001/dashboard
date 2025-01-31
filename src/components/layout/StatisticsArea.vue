@@ -108,7 +108,8 @@ export default {
   padding: 15px 20px 0px 20px;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  /* box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .cards-layout {

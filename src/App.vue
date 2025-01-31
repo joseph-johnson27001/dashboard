@@ -42,6 +42,7 @@ body {
   flex-grow: 1;
   overflow-y: auto;
   width: 100%;
+  background-color: #fafafa;
 }
 
 #mobile-top-nav {
