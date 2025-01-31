@@ -72,6 +72,7 @@ export default {
   font-size: 16px;
   position: relative;
   border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -100,6 +101,7 @@ export default {
   background-color: #15161b;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .dropdown-menu .sidebar-item {
@@ -120,12 +122,10 @@ export default {
   margin-right: 10px;
 }
 
-/* Hide dropdown menu by default */
 .dropdown-menu {
   display: none;
 }
 
-/* Show dropdown menu when visible */
 .dropdown-menu {
   display: block;
 }

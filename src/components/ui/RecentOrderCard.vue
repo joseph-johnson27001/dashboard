@@ -227,8 +227,10 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .orders-table th:nth-child(2),
   .orders-table th:nth-child(3),
   .orders-table th:nth-child(4),
+  .orders-table td:nth-child(2),
   .orders-table td:nth-child(3),
   .orders-table td:nth-child(4) {
     display: none;

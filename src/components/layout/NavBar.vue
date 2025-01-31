@@ -47,7 +47,7 @@ export default {
   padding: 5px 10px;
   margin: 10px 20px;
   width: 30%;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 16px;
   border: 1px solid #eee;
   cursor: text;
@@ -108,5 +108,22 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+@media (max-width: 550px) {
+  .icon-circle {
+    display: none;
+  }
+  .search-bar {
+    flex-grow: 1;
+    margin: 5px;
+  }
+  .profile-circle {
+    margin: 0px;
+  }
+  .user-icons {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 </style>
