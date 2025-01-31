@@ -123,6 +123,7 @@ export default {
   flex-direction: column;
   transition: width 0.3s ease;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar.collapsed {
