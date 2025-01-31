@@ -2,7 +2,9 @@
   <div class="weekly-orders-card">
     <div class="header">
       <h3 class="title">Weekly Top Customers</h3>
-      <span class="three-dots">...</span>
+      <span class="three-dots">
+        <i class="fas fa-ellipsis"></i>
+      </span>
     </div>
 
     <div class="divider"></div>
@@ -76,10 +78,8 @@ export default {
   color: #15161b;
 }
 
-.three-dots {
-  font-size: 30px;
-  color: grey;
-  cursor: pointer;
+.three-dots i {
+  font-size: 14px;
 }
 
 .divider {

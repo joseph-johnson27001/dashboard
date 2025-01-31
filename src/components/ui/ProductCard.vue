@@ -3,7 +3,9 @@
     <!-- Top Heading Section -->
     <div class="header">
       <h3 class="title">Most Selling Products</h3>
-      <span class="three-dots">...</span>
+      <span class="three-dots">
+        <i class="fas fa-ellipsis"></i>
+      </span>
     </div>
 
     <!-- Divider -->
@@ -77,12 +79,11 @@ export default {
   font-size: 16px;
   font-weight: 400;
   color: #15161b;
+  margin-right: 8px;
 }
 
-.three-dots {
-  font-size: 30px;
-  color: grey;
-  cursor: pointer;
+.three-dots i {
+  font-size: 14px;
 }
 
 .divider {
@@ -165,7 +166,7 @@ export default {
 
   .item-row {
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 0;
   }
 
   .item-name {
@@ -200,6 +201,7 @@ export default {
     display: flex;
     padding: 15px;
   }
+
   .item-image {
     height: 35px;
     width: 35px;
