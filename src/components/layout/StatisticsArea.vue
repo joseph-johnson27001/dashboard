@@ -108,7 +108,7 @@ export default {
   padding: 10px 20px 0px 20px;
   border: 1px solid #ddd;
   border-radius: 12px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cards-layout {
@@ -145,13 +145,15 @@ export default {
 }
 
 @media (max-width: 700px) {
-  .stat-cards {
-    grid-template-columns: 1fr;
-  }
-
   .card-row {
     grid-template-columns: 1fr;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .stat-cards {
+    grid-template-columns: 1fr;
   }
 }
 </style>

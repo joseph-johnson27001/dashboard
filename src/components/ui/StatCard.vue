@@ -57,6 +57,8 @@ export default {
   padding: 15px 20px;
   border-radius: 12px;
   border: 1px solid #ddd;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
 .card-header {
@@ -71,7 +73,7 @@ export default {
 }
 
 .card-value {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin: 5px 0px 10px 0px;
 }
