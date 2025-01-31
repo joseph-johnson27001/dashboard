@@ -164,7 +164,7 @@ export default {
 
   .item-row {
     align-items: center;
-    padding: 10px 8px;
+    padding: 10px 0px;
   }
 
   .item-name {
@@ -182,7 +182,6 @@ export default {
   }
 
   .sales-container {
-    margin-top: 6px;
     text-align: center;
   }
 
@@ -197,12 +196,12 @@ export default {
   }
 
   .sales-container {
-    margin-top: 6px;
     display: flex;
     padding: 15px;
   }
-  .item-details {
-    display: none;
+  .item-image {
+    height: 35px;
+    width: 35px;
   }
 }
 </style>
