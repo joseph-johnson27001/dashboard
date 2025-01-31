@@ -72,7 +72,7 @@
       />
       <SideBarItem
         icon="fas fa-user-cog"
-        text="Manage Users"
+        text="Users"
         :isActive="activeTab === 'Manage Users'"
         @setActive="setActiveTab('Manage Users')"
       />
@@ -221,7 +221,7 @@ export default {
   display: flex;
   justify-self: center;
   margin: auto;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 </style>
