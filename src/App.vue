@@ -2,6 +2,7 @@
   <div id="app">
     <SideBar id="side-bar" />
     <div class="main-content">
+      <MobileTopNav id="mobile-top-nav" />
       <DashboardView />
     </div>
   </div>
@@ -10,12 +11,14 @@
 <script>
 import SideBar from "@/components/layout/SideBar.vue";
 import DashboardView from "@/views/DashboardView.vue";
+import MobileTopNav from "./components/layout/MobileTopNav.vue";
 
 export default {
   name: "App",
   components: {
     SideBar,
     DashboardView,
+    MobileTopNav,
   },
 };
 </script>
@@ -41,9 +44,16 @@ body {
   width: 100%;
 }
 
+#mobile-top-nav {
+  display: none;
+}
+
 @media (max-width: 550px) {
   #side-bar {
     display: none;
+  }
+  #mobile-top-nav {
+    display: block;
   }
 }
 </style>
