@@ -34,4 +34,10 @@ export default {
 .content-area {
   padding: 20px 30px;
 }
+
+@media (max-width: 550px) {
+  .content-area {
+    padding: 20px 10px;
+  }
+}
 </style>

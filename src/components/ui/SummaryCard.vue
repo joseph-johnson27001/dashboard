@@ -1,8 +1,7 @@
 <template>
   <div class="summary-card">
-    <!-- Header Section -->
     <div class="header">
-      <h3 class="title">Summary</h3>
+      <h3 class="title">{{ selectedRange }}</h3>
       <div class="dropdown">
         <div class="dropdown-trigger" @click="toggleDropdown">
           <span>{{ selectedRange }}</span>
@@ -21,10 +20,8 @@
       </div>
     </div>
 
-    <!-- Divider -->
     <div class="divider"></div>
 
-    <!-- Chart Component -->
     <LineChart :selected-range="selectedRange" />
   </div>
 </template>
@@ -68,9 +65,6 @@ export default {
 </script>
 
 <style scoped>
-/* Card Styling */
-
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -83,7 +77,6 @@ export default {
   color: #15161b;
 }
 
-/* Dropdown */
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -137,10 +130,57 @@ export default {
   background-color: #f1f1f1;
 }
 
-/* Divider */
 .divider {
   height: 1px;
   background-color: #eee;
   margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    width: 120px;
+  }
+
+  .dropdown-trigger {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .dropdown-options {
+    width: 130px;
+  }
+
+  .dropdown-option {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .chevron {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .dropdown {
+    width: 100px;
+  }
+
+  .dropdown-trigger {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .dropdown-options {
+    width: 110px;
+  }
+
+  .dropdown-option {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .chevron {
+    font-size: 9px;
+  }
 }
 </style>
