@@ -77,7 +77,7 @@ export default {
           title: "Average Order Value",
           value: "$320.75",
           percentage: "8.2%",
-          backgroundColor: "#f5f7f6",
+          backgroundColor: "#ede7f6",
           additionalValue: "(+5.60%)",
         },
       ],
@@ -108,7 +108,6 @@ export default {
   padding: 10px 20px 0px 20px;
   border: 1px solid #eee;
   border-radius: 12px;
-  background-color: white;
 }
 
 .cards-layout {
