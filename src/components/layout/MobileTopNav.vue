@@ -19,7 +19,7 @@
         :icon="item.icon"
         :text="item.text"
         :isActive="activeTab === item.text"
-        @setActive="setActiveTab(item.text)"
+        @setActive="selectItem(item.text)"
       />
     </div>
   </header>
@@ -53,8 +53,9 @@ export default {
     toggleMenu() {
       this.menuVisible = !this.menuVisible;
     },
-    setActiveTab(tab) {
+    selectItem(tab) {
       this.activeTab = tab;
+      this.menuVisible = false;
     },
   },
 };
@@ -119,10 +120,12 @@ export default {
   margin-right: 10px;
 }
 
+/* Hide dropdown menu by default */
 .dropdown-menu {
   display: none;
 }
 
+/* Show dropdown menu when visible */
 .dropdown-menu {
   display: block;
 }
