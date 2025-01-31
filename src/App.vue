@@ -48,7 +48,7 @@ body {
   display: none;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   div.card {
     padding-left: 10px !important;
     padding-right: 10px !important;
