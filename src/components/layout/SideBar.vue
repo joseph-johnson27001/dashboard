@@ -125,7 +125,7 @@ export default {
   overflow: hidden;
 }
 .sidebar.collapsed {
-  width: 80px;
+  width: 60px;
 }
 
 /* Header Section */
@@ -209,7 +209,7 @@ export default {
   width: 100%;
   padding: 10px 10px;
   height: 35px;
-  width: 70px;
+  width: 50px;
   margin: 0px;
 }
 
