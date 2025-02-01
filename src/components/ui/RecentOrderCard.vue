@@ -155,7 +155,7 @@ export default {
 
 .orders-table td {
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
   border-bottom: 1px solid #eee;
 }
@@ -267,13 +267,15 @@ tr {
     font-size: 12px;
   }
 
+  .status-tag {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 450px) {
   .customer-name,
   .order-id,
   .order-date {
-    font-size: 10px;
-  }
-
-  .status-tag {
     font-size: 10px;
   }
 }
