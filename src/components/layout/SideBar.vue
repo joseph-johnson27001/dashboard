@@ -4,7 +4,7 @@
     <div class="sidebar-header">
       <div class="logo">
         <span class="icon" v-if="!isCollapsed">💚</span>
-        <span v-if="!isCollapsed" class="dashboard-name">Dashboard</span>
+        <span v-if="!isCollapsed" class="dashboard-name">Sales Board</span>
       </div>
       <button class="toggle-btn" @click="toggleSidebar">
         <i class="fas fa-bars"></i>
