@@ -137,6 +137,7 @@ export default {
   justify-content: space-between;
   padding: 20px 10px 10px 10px;
   font-size: 16px;
+  text-wrap: nowrap;
 }
 .logo {
   display: flex;
