@@ -5,6 +5,7 @@
       <MobileTopNav id="mobile-top-nav" />
       <DashboardView />
     </div>
+    <DashboardButton />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import SideBar from "@/components/layout/SideBar.vue";
 import DashboardView from "@/views/DashboardView.vue";
 import MobileTopNav from "./components/layout/MobileTopNav.vue";
+import DashboardButton from "@/components/ui/DashboardButton.vue";
 
 export default {
   name: "App",
@@ -19,6 +21,7 @@ export default {
     SideBar,
     DashboardView,
     MobileTopNav,
+    DashboardButton,
   },
 };
 </script>
